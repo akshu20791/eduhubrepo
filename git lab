@@ -1,0 +1,35 @@
+git init
+  502  touch file1
+  503  git add file1
+  504  git commit -m"c1"
+  505  touch file2
+  506  git add file2
+  507  git commit -m"c2"
+  508  touch file3
+  509  git add file3
+  510  git commit -m"c3"
+  511  touch file4
+  512  git add file4
+  513  git commit -m"c4"
+  514  touch file5
+  515  git add file5
+  516  git commit -m"c5"
+  517  git log --oneline
+  518  git reset --hard 4634249 (here 4634249 is c3 commit id)
+  519  git log --oneline  (you will see c1 c2 and c3 only)
+  520  ls  (you will see only file1 file2 file3 only as other files are removed)
+  521  touch file4
+  522  git add .
+  523  git commit -m"c4"
+  524  touch file5
+  525  git add .
+  526  git commit -m"c5"
+  527  touch file6
+  528  git add .
+  529  git commit -m"c6"
+  530  clear
+  531  git log --oneline   
+git reset --mixed 4634249  (here 4634249 is c3 commit id)
+git log --oneline (you will see c1, c2 c3 only)
+ls (you will see file1 to file6 - files are not deleted)
+git status (you will see the files are unrtracked in red color)
